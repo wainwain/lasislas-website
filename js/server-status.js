@@ -35,8 +35,6 @@ async function fetchServerStatus() {
   }
 }
 
-// Initial fetch
 fetchServerStatus();
 
-// Auto-refresh every 60 seconds
 setInterval(fetchServerStatus, 60000);
