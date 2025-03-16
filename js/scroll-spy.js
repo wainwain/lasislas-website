@@ -5,11 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = sidebar.querySelectorAll("a");
     const targetSections = Array.from(
       document.querySelectorAll(
-        links.length && links[0].getAttribute("href").startsWith("#")
-          ? links[0].getAttribute("href").includes("overview") // a clue it's Rules page
-            ? ".rules-content section"
-            : ".lore-article section"
-          : "section"
+        document.querySelector('.rules-content') ? ".rules-content section" : ".lore-article section"
       )
     );
 
