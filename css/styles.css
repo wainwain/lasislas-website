@@ -1983,16 +1983,16 @@ LORE PAGE
 .rules-sidebar {
   position: sticky;
   top: 100px;
-  max-height: calc(100vh - 150px);
-  overflow-y: auto;
-  flex: 0 0 250px;
+  align-self: flex-start;
   background-color: #242424;
   padding: 20px;
-  border-left: 4px solid #ffd369;
   border-radius: 8px;
+  border-left: 4px solid #ffd369;
   font-family: 'ChineseRocks', sans-serif;
+  flex: 0 0 250px;
+  overflow-y: auto;
   scrollbar-width: auto;
-  scrollbar-color: #1b1615 transparent;
+  scrollbar-color: #ffd369 transparent;
 }
 
 /* scrollbar style */
@@ -2000,13 +2000,31 @@ LORE PAGE
   width: 6px;
 }
 
-.rules-sidebar::-webkit-scrollbar-thumb {
-  background-color: #cc1f1a;
+/* .rules-sidebar::-webkit-scrollbar-thumb {
+  background-color: #ffd369;
   border-radius: 4px;
+} */
+.rules-sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ffd369, #cc1f1a);
+  border-radius: 8px;
+  box-shadow: 0 0 6px #ffd369, 0 0 12px #cc1f1a;
+  animation: flickerFuse 1.5s infinite;
 }
 
+/* .rules-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+} */
 .rules-sidebar::-webkit-scrollbar-track {
   background: transparent;
+}
+
+@keyframes flickerFuse {
+  0%, 100% {
+    box-shadow: 0 0 6px #ffd369, 0 0 12px #cc1f1a;
+  }
+  50% {
+    box-shadow: 0 0 2px #cc1f1a, 0 0 4px #ffd369;
+  }
 }
 /* */
 
@@ -2050,7 +2068,6 @@ LORE PAGE
 /* */
 .rules-collapse {
   margin-bottom: 20px;
-  /* border: 1px solid #999; */
   border-radius: 8px;
   overflow: hidden;
 }
