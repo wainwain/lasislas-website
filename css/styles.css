@@ -1725,7 +1725,8 @@ form {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  /* transition: background-color 0.3s ease; */
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -1734,6 +1735,7 @@ form {
 }
 
 .footer-discord-btn:hover {
+  scale: 1.05;
   background-color: #4752c4;
 }
 
