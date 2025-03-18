@@ -730,6 +730,7 @@ END OF HEADER
 }
 
 .hero-logo-button:hover {
+  scale: 1.05;
   background-color: white;
   color: black;
 }
@@ -1299,6 +1300,7 @@ display: inline-block;
   }
   
   .server-connect-btn.retro-western:hover {
+    scale: 1.05;
     background: #cc1f1a;
     color: white;
     border-color: #cc1f1a;
