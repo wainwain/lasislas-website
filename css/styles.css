@@ -86,6 +86,13 @@ h6 {
 
 /* Global styles */
 
+html {
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
+
 .font-chineserocks {
   font-family: 'ChineseRocks', 'Roboto', sans-serif;
 }
@@ -146,7 +153,6 @@ a {
   max-width: 428px;
   margin: 0 auto;
   padding: 0 15px;
-
   @media screen and (min-width: 768px) {
     max-width: 768px;
   }
@@ -616,6 +622,7 @@ END OF HEADER
 }
 
 .hero-section {
+  scroll-snap-align: start;
   position: relative;
   z-index: 1;
   margin-top: -20px; 
@@ -763,6 +770,7 @@ END OF HEADER
 LORE SECTION
 =============================== */
 .home-lore {
+  scroll-snap-align: start;
   background-color: #000000;
   color: #fefae0;
   padding: 80px 20px;
@@ -1163,6 +1171,7 @@ LORE SECTION
    =============================== */
 
    .community-section {
+    scroll-snap-align: start;
     background: url('../images/grunge-parchment2.jpg') center/cover no-repeat, #1a140f;
     background-attachment: fixed;
     padding: 80px 20px;
@@ -1432,6 +1441,7 @@ footer a {
 }
 
 footer {
+  scroll-snap-align: none;
   padding: 100px 0;
 }
 
